@@ -1,0 +1,29 @@
+/* ********** Bold Oxygen font ********* */
+@font-face {
+  font-family: oxygen;
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/oxygen-woff2/oxygen-700.woff2") format("woff2"),
+      url("../fonts/oxygen-woff/oxygen-700.woff") format("woff"),
+      url("../fonts/oxygen-ttf/oxygen-700.ttf") format("ttf");
+}
+
+/* ********** Normal Oxygen font ********* */
+@font-face {
+  font-family: oxygen;
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/oxygen-woff2/oxygen-400.woff2") format("woff2"),
+      url("../fonts/oxygen-woff/oxygen-400.woff") format("woff"),
+      url("../fonts/oxygen-ttf/oxygen-400.ttf") format("ttf");
+}
+
+/* ********** Light Oxygen font ********* */
+@font-face {
+  font-family: oxygen;
+  font-weight: 300;
+  font-style: normal;
+  src: url("../fonts/oxygen-woff2/oxygen-300.woff2") format("woff2"),
+      url("../fonts/oxygen-woff/oxygen-300.woff") format("woff"),
+      url("../fonts/oxygen-ttf/oxygen-300.ttf") format("ttf");
+}
