@@ -36,7 +36,7 @@ ul {
     margin: 0;
     padding: 0;
 }
-p, li, div {
+p, li, span {
     font-weight: 400;
     font-size: 20px;
 }
@@ -66,6 +66,9 @@ a {
 .theme-switcher {
     grid-area: theme-switcher;
     justify-self: end;
+    align-self: start;
+    font-size: 40px;
+    cursor: pointer;
 }
 .page-title {
     margin-top: 25px;
@@ -108,21 +111,21 @@ a {
 .project-info > ul {
     margin-bottom: 30px;
 }
-.project-info li {
-    display: inline-block;
-}
 .tech-stack > li {
     text-transform: uppercase;
     padding: 5px 10px;
     color: white;
     background-color: #282828;
     margin-right: 5px;
+    display: inline-block;
 }
 .external-links > li {
     margin-right: 10px;
+    display: inline-block;
 }
 .external-links > li:hover {
     color: #40798C;
+    cursor: pointer;
 }
 
 /* ********* Skills styles ******** */
@@ -149,7 +152,7 @@ form {
     row-gap: 20px;
     padding: 30px;
     border: 2px solid #282828;
-    max-width: 700px;
+    max-width: 650px;
     width: 100%;
 }
 #contact > p {
@@ -158,7 +161,7 @@ form {
 textarea, input, button {
     font-family: oxygen;
     font-weight: 300;
-    font-size: 20px; 
+    font-size: 18px; 
     padding: 10px;
     outline: none;
     border: 1px solid #282828;
@@ -176,4 +179,18 @@ button {
 button:hover {
     background-color: #fff;
     color: #282828;
+}
+
+/* ********* Footer Styles ********* */
+footer {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+footer li {
+    display: inline-block;
+}
+footer a {
+    font-size: 35px;
 }
