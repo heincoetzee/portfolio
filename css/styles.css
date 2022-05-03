@@ -16,20 +16,29 @@ body {
 }
 h1 {
     font-weight: 700;
-    font-size: 45px;
+    font-size: 50px;
     text-align: center;
 }
 h2 {
     font-weight: 700;
-    font-size: 30px;
+    font-size: 40px;
+}
+h3 {
+    font-weight: 700;
+    font-size: 35px;
 }
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
-p, li {
+p, li, div {
     font-weight: 400;
+    font-size: 20px;
+}
+img {
+    max-width: 600px;
+    max-height: 400px;
 }
 
 /* ********* Welcome Page styles ********* */
@@ -70,4 +79,42 @@ p, li {
 .main-nav-bar li:hover {
     border-bottom: 2px solid #282828;
     cursor: pointer;
+}
+.main-nav-bar a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ********* Project styles ******** */
+.project {
+    margin-bottom: 100px;
+    display: flex;
+    flex-flow: row nowrap;
+    column-gap: 40px;
+}
+.project:last-child {
+    margin-bottom: 0;
+}
+.project-info > h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.project-info > p {
+    margin-bottom: 50px;
+}
+.project-info > ul {
+    margin-bottom: 30px;
+}
+.project-info li {
+    display: inline-block;
+}
+.tech-stack > li {
+    text-transform: uppercase;
+    padding: 5px 10px;
+    color: white;
+    background-color: #282828;
+    margin-right: 5px;
+}
+.external-links > li {
+    margin-right: 10px;
 }
