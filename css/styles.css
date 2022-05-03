@@ -1,1 +1,73 @@
 @import url("fonts.css");
+
+/* ********* Global styles ********** */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 30px 50px;
+    font-family: oxygen, sans-serif;
+    color: #282828;
+    background-color: #fff;
+}
+h1 {
+    font-weight: 700;
+    font-size: 45px;
+    text-align: center;
+}
+h2 {
+    font-weight: 700;
+    font-size: 30px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+p, li {
+    font-weight: 400;
+}
+
+/* ********* Welcome Page styles ********* */
+.welcome-page-wrapper {
+    display: grid;
+    grid-template-rows: 20vh 80vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "navbar theme-switcher"
+        "page-title page-title";
+}
+
+/* ********* Header styles ********* */
+.main-nav-bar {
+    grid-area: navbar;
+}
+.theme-switcher {
+    grid-area: theme-switcher;
+    justify-self: end;
+}
+.page-title {
+    margin-top: 25px;
+    grid-area: page-title;
+    place-self: start center;
+}
+
+/* ********* Nav bar styles ********* */
+.main-nav-bar > ul {
+    display: flex;
+    flex-flow: row nowrap;
+    column-gap: 20px;
+}
+.main-nav-bar li {
+    transition: border-bottom 0.3s ease-out;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 2px;
+}
+.main-nav-bar li:hover {
+    border-bottom: 2px solid #282828;
+    cursor: pointer;
+}
