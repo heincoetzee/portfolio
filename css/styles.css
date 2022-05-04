@@ -192,7 +192,6 @@ span.not-visible {
 .external-links > li {
   margin-right: 10px;
   display: inline-block;
-  transition: color 0.3s ease-out;
 }
 .external-links > li:hover {
   color: #40798C;
@@ -253,6 +252,17 @@ textarea, input, button {
   padding: 10px;
   outline: none;
   border: 1px solid #282828;
+  transition: box-shadow 0.2s ease-in;
+  width: 100%;
+}
+.valid-input {
+  border-color: #282828;
+}
+.not-valid-input {
+  border-color: tomato;
+}
+form *:focus {
+  box-shadow: 0 0 1px 1px #4b899e;
 }
 textarea {
   resize: vertical;
@@ -293,4 +303,10 @@ footer li {
 }
 footer a {
   font-size: 35px;
+}
+.error-message {
+  display: inline-block;
+  margin: 3px 0 0 0;
+  font-size: 14px;
+  color: tomato;
 }
