@@ -3,17 +3,17 @@
   <head>
     <title>Hein Coetzee | Full Stack Developer</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="descriptions" content="Hi, my name is Hein Coetzee. 
       I am a Full Stack Developer.">
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://kit.fontawesome.com/d1e4ce82e3.js" crossorigin="anonymous"></script>
-    <script defer src="main.js"></script>
+    <script defer src="theme-switcher.js"></script>
   </head>
-  <body> 
+  <body class="light-page"> 
     <div class="welcome-page-wrapper">
       <!-- ********** Header ********** -->
-      <nav class="main-nav-bar">
+      <nav class="navbar light-navbar">
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Project</a></li>
@@ -22,16 +22,17 @@
         </ul>
       </nav>
       <!-- ********** Dark/Light Theme Switcher ********** -->
-      <span class="fa-solid fa-moon theme-switcher" title="Switch to Dark Theme"></span>
+      <span class="fa-solid fa-moon theme-switcher visible" title="Switch to Dark Theme"></span>
+      <span class="fa-solid fa-lightbulb theme-switcher not-visible" title="Switch to Light Theme"></span>
 
       <!-- ********** Page Title ********** -->
       <section class="page-title">
         <h1>Hein Coetzee</h1>
         <h1>Full Stack Developer</h1>
-
         <!-- ********** Animated scrolling arrow ********** -->
-        <div></div>
       </section>
+
+      <span class="fa-solid fa-arrow-down-long scroll-down-arrow"></span>
     </div>
 
     <!-- ********** Main Content ********** -->
@@ -52,7 +53,7 @@
           <div class="project-info">
             <h3>Title</h3>
             <p>Description</p>
-            <ul class="tech-stack">
+            <ul class="tech-stack light-tech-stack">
               <li>Tech 1</li>
               <li>Tech 2</li>
               <li>Tech 3</li>
@@ -77,7 +78,7 @@
           <div class="project-info">
             <h3>Title</h3>
             <p>Description</p>
-            <ul class="tech-stack">
+            <ul class="tech-stack light-tech-stack">
               <li>Tech 1</li>
               <li>Tech 2</li>
               <li>Tech 3</li>
@@ -102,7 +103,7 @@
           <div class="project-info">
             <h3>Title</h3>
             <p>Description</p>
-            <ul class="tech-stack">
+            <ul class="tech-stack  light-tech-stack">
               <li>Tech 1</li>
               <li>Tech 2</li>
               <li>Tech 3</li>
@@ -160,12 +161,12 @@
       <section id="contact">
         <h2>Contact</h2>
         <p>Any questions? Then go ahead and fill out this form to send me an email.</p>
-        <form action="submit.php" method="POST">
+        <form action="submit.php" method="POST" class="light-form">
           <input type="text" name="username" placeholder="name">
           <input type="email" name="email" placeholder="email">
-          <textarea cols="30" rows="10" placeholder="message"></textarea>
+          <textarea cols="30" rows="10" name="message" placeholder="message"></textarea>
 
-          <button type="submit">Submit</button>
+          <button type="submit" class="light-button">Submit</button>
         </form>
       </section>
     </main>
