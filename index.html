@@ -10,11 +10,13 @@
     <script src="https://kit.fontawesome.com/d1e4ce82e3.js" crossorigin="anonymous"></script>
     <script defer src="javascript/theme-switcher.js"></script>
     <script defer src="javascript/form-validation.js"></script>
+    <script defer src="javascript/mobile-layout.js"></script>
   </head>
   <body class="light-page"> 
-    <div class="welcome-page-wrapper">
+    <div class="welcome-page-wrapper navbar-not-expanded">
       <!-- ********** Header ********** -->
-      <nav class="navbar light-navbar">
+      <span class="fa-solid fa-bars hamburger-icon not-visible"></span>
+      <nav class="navbar light-navbar navbar-visible">
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Project</a></li>

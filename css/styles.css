@@ -31,13 +31,25 @@ body {
     padding: 15px 25px;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
   body {
-    padding: 10px 15px;
+    padding: 0px;
+  }
+  .welcome-page-wrapper h1 {
+    padding: 15px;
+    margin: 0;
+  }
+  main, .hamburger-icon, .theme-switcher {
+    padding: 15px;
   }
 }
 main > section {
   margin-bottom: 70px;
+}
+@media screen and (max-width: 420px) {
+  main > section {
+    margin-bottom: 40px;
+  }
 }
 h1 {
   font-weight: 700;
@@ -62,6 +74,34 @@ p, li, span {
   font-weight: 400;
   font-size: 20px;
 }
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 45px;
+  }
+  h2 {
+    font-size: 35px;
+  }
+  h3 {
+    font-size: 30px; 
+  }
+  p, li, span {
+    font-size: 19px;
+  }
+}
+@media screen and (max-width: 420px) {
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 25px; 
+  }
+  p, li, span {
+    font-size: 18px;
+  }
+}
 img {
   max-width: 600px;
   width: 100%;
@@ -83,18 +123,36 @@ a {
 /* ********* Welcome Page styles ********* */
 .welcome-page-wrapper {
   display: grid;
-  grid-template-rows: 1fr 3fr 2fr;
   grid-template-columns: 1fr 1fr;
+  height: 100%;
+}
+div.new-grid {
+  grid-template-areas: 
+  "hamburger-icon theme-switcher"
+  "page-title page-title"
+  "arrow-down arrow-down";
+}
+body > div.navbar-expanded {
+  grid-template-rows: 0.7fr 1fr 3fr 2fr;
+  grid-template-areas: 
+    "hamburger-icon theme-switcher"
+    "navbar navbar"
+    "page-title page-title"
+    "arrow-down arrow-down";
+}
+.navbar-not-expanded {
+  grid-template-rows: 1fr 3fr 2fr;
   grid-template-areas:
     "navbar theme-switcher"
     "page-title page-title"
     "arrow-down arrow-down";
-  height: 100%;
 }
 
 /* ********* Header styles ********* */
-.main-nav-bar {
-  grid-area: navbar;
+.hamburger-icon {
+  font-size: 35px;
+  grid-area: hamburger-icon;
+  cursor: pointer;
 }
 .theme-switcher {
   grid-area: theme-switcher;
@@ -102,6 +160,11 @@ a {
   align-self: start;
   font-size: 40px;
   cursor: pointer;
+}
+@media screen and (max-width: 420px) {
+  .theme-switcher {
+    font-size: 35px;
+  }
 }
 span.visible {
   display: inline-block;
@@ -113,6 +176,11 @@ span.not-visible {
   margin-top: 25px;
   grid-area: page-title;
   place-self: start center;
+}
+@media screen and (max-width: 850px) {
+  .page-title {
+    place-self: center center;
+  }
 }
 .scroll-down-arrow {
   grid-area: arrow-down;
@@ -129,13 +197,21 @@ span.not-visible {
 }
 
 /* ********* Nav bar styles ********* */
+.navbar-visible {
+  height: auto;
+  grid-area: navbar;
+}
+.navbar-not-visible {
+  height: 0;
+  overflow: hidden;
+}
 .navbar > ul {
   display: flex;
   flex-flow: row nowrap;
   column-gap: 20px;
 }
 .navbar li {
-  transition: border-bottom 0.3s ease-out;
+  transition: border-bottom 0.3s ease-out, color 0.2s, background-color 0.2s;
   border-bottom: 2px solid transparent;
   padding-bottom: 2px;
   cursor: pointer;
@@ -145,6 +221,35 @@ span.not-visible {
 }
 .dark-navbar li:hover {
   border-bottom: 2px solid #fff;
+}
+@media screen and (max-width: 420px) {
+  .navbar > ul {
+    width: 100%;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+  }
+  .navbar li {
+    border-bottom: none;
+    padding: 15px 20px;
+  }
+  .light-navbar {
+    color: #fff;
+    background-color: #282828;
+  }
+  .light-navbar li:hover {
+    border: none;
+    color: #282828;
+    background-color: #fff;
+  }
+  .dark-navbar {
+    color: #282828;
+    background-color: #fff;
+  }
+  .dark-navbar li:hover {
+    border: none;
+    color: #fff;
+    background-color: #282828;
+  }
 }
 
 /* ********* Project styles ******** */
@@ -254,6 +359,11 @@ textarea, input, button {
   border: 1px solid #282828;
   transition: box-shadow 0.2s ease-in;
   width: 100%;
+}
+@media screen and (max-width: 420px) {
+  textarea, input, button {
+    font-size: 17px;
+  }
 }
 .valid-input {
   border-color: #282828;
