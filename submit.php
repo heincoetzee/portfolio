@@ -10,7 +10,7 @@
         "From" => $email,
     );
 
-    // mail($to, $subject, $message, $headers);
+    mail($to, $subject, $message, $headers);
 
     echo "Email has been send!";
 ?>
